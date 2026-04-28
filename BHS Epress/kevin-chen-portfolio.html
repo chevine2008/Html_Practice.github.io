@@ -1,0 +1,184 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Kevin Chen - Portfolio</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <header>
+        <div class="container">
+            <div class="header-content">
+                <div class="logo">💬 Kevin Chen</div>
+                <nav>
+                    <ul>
+                        <li><a href="#home">Home</a></li>
+                        <li><a href="#education">Education</a></li>
+                        <li><a href="#skills">Skills</a></li>
+                        <li><a href="#audio">Music</a></li>
+                        <li><a href="#contact">Contact</a></li>
+                    </ul>
+                </nav>
+            </div>
+        </div>
+    </header>
+
+    <main>
+        <section class="hero" id="home">
+            <div class="container">
+                <div class="hero-content">
+                    <div class="hero-profile">
+                        <img src="Screenshot 2026-04-28 091711_edited.png" alt="Kevin Chen" class="profile-img">
+                        <div class="hero-text">
+                            <h1>Kevin Chen</h1>
+                            <p>Quick Thinker • Fast Learner • Problem Solver</p>
+                            <p class="typing-effect">Building my future, one step at a time...</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <div class="container">
+            <section id="education">
+                <h2 class="section-title">Education</h2>
+                
+                <div class="education-item">
+                    <div class="education-icon">
+                        <i class="fas fa-graduation-cap"></i>
+                    </div>
+                    <div class="education-content">
+                        <h3>High School Diploma</h3>
+                        <div class="date">June 2026</div>
+                        <p>Belize High School - Currently completing my high school education with focus on academic excellence and personal development.</p>
+                    </div>
+                </div>
+            </section>
+
+            <section id="skills">
+                <h2 class="section-title">Skills</h2>
+                
+                <div class="skills-grid">
+                    <div class="skill-card">
+                        <div class="skill-icon">
+                            <i class="fas fa-brain"></i>
+                        </div>
+                        <h3>Quick Thinking</h3>
+                        <p>Ability to analyze situations rapidly and make informed decisions under pressure. Excel at fast-paced environments and problem-solving scenarios.</p>
+                    </div>
+
+                    <div class="skill-card">
+                        <div class="skill-icon">
+                            <i class="fas fa-shield-alt"></i>
+                        </div>
+                        <h3>Works Under Pressure</h3>
+                        <p>Thrive in challenging situations and maintain focus when deadlines are tight. Known for keeping calm and delivering results when it matters most.</p>
+                    </div>
+
+                    <div class="skill-card">
+                        <div class="skill-icon">
+                            <i class="fas fa-rocket"></i>
+                        </div>
+                        <h3>Fast Learner</h3>
+                        <p>Quickly grasp new concepts and skills. Adaptable to new technologies and methodologies with enthusiasm and dedication.</p>
+                    </div>
+
+                    <div class="skill-card">
+                        <div class="skill-icon">
+                            <i class="fas fa-code"></i>
+                        </div>
+                        <h3>Web Development</h3>
+                        <p>Proficient in HTML, CSS, and JavaScript. Experience building responsive websites and modern web applications.</p>
+                    </div>
+
+                    <div class="skill-card">
+                        <div class="skill-icon">
+                            <i class="fas fa-python"></i>
+                        </div>
+                        <h3>Python Programming</h3>
+                        <p>Strong foundation in Python programming for data analysis, automation, and problem-solving.</p>
+                    </div>
+
+                    <div class="skill-card">
+                        <div class="skill-icon">
+                            <i class="fas fa-users"></i>
+                        </div>
+                        <h3>Team Collaboration</h3>
+                        <p>Excellent communication and teamwork skills. Experience working in group projects and leading teams effectively.</p>
+                    </div>
+                </div>
+            </section>
+
+            <section id="audio">
+                <h2 class="section-title">Background Music</h2>
+                
+                <div class="audio-container">
+                    <div class="audio-player">
+                        <div class="audio-info">
+                            <h3><i class="fas fa-music"></i> Hypermono</h3>
+                            <p>Auto-playing background music (click to mute)</p>
+                        </div>
+                        <div class="audio-controls">
+                            <button class="audio-btn" id="playPauseBtn" onclick="toggleAudio()">
+                                <i class="fas fa-volume-up" id="playIcon"></i>
+                            </button>
+                            <input type="range" id="volumeSlider" min="0" max="100" value="30" onchange="changeVolume(this.value)">
+                            <span class="volume-label">30%</span>
+                        </div>
+                    </div>
+                    <div class="audio-note">
+                        <p><small><i class="fas fa-info-circle"></i> Music auto-plays when you open the page! Click the volume button to mute/unmute.</small></p>
+                    </div>
+                </div>
+            </section>
+
+            <section id="contact">
+                <h2 class="section-title">Get In Touch</h2>
+                
+                <div class="contact-container">
+                    <div class="contact-item" onclick="copyToClipboard('kchen@belizehighschool.edu.bz')">
+                        <div class="contact-icon">
+                            <i class="fas fa-envelope"></i>
+                        </div>
+                        <h3>Email</h3>
+                        <p>kchen@belizehighschool.edu.bz</p>
+                        <small>Click to copy</small>
+                    </div>
+
+                    <div class="contact-item" onclick="copyToClipboard('+1-555-0123-4567')">
+                        <div class="contact-icon">
+                            <i class="fas fa-phone"></i>
+                        </div>
+                        <h3>Phone</h3>
+                        <p>+1-555-0123-4567</p>
+                        <small>Click to copy</small>
+                    </div>
+
+                    <div class="contact-item" onclick="openLinkedIn()">
+                        <div class="contact-icon">
+                            <i class="fab fa-linkedin"></i>
+                        </div>
+                        <h3>LinkedIn</h3>
+                        <p>Connect with me professionally</p>
+                        <small>Click to visit</small>
+                    </div>
+                </div>
+            </section>
+        </div>
+    </main>
+
+    <footer>
+        <div class="container">
+            <p>&copy; 2026 Kevin Chen. All rights reserved.</p>
+        </div>
+    </footer>
+
+    <button class="theme-toggle" onclick="toggleTheme()">
+        <i class="fas fa-moon" id="theme-icon"></i>
+    </button>
+
+    <script src="script.js"></script>
+</body>
+</html>
